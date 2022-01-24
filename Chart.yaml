@@ -1,7 +1,7 @@
 apiVersion: v2
 name: olivetin
 description: A OliveTin Helm chart for Kubernetes
-icon: https://www.olivetin.app/images/icons/OliveTinLogo.png
+icon: https://www.olivetin.app/resources/images/logo.png
 home: https://www.olivetin.app
 sources:
   - https://github.com/OliveTin/OliveTin

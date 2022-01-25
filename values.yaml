@@ -1,3 +1,8 @@
+---
 ingress:
   enabled: true
   host: olivetin.example.com
+
+persisentVolume: true
+
+containerVersion: latest

@@ -14,7 +14,6 @@
 			"type": "object",
 			"title": "Options for controlling ingress",
 			"description": "A Kubernetes Ingress resource is a easy way to allow users from outside the cluster to connect to the OliveTin web interface and API.",
-			"default": {},
 			"examples": [
 				{
 					"enabled": true,

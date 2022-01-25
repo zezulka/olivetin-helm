@@ -5,58 +5,48 @@
     "title": "OliveTin-HelmChart schema",
     "description": "The root schema comprises the entire JSON document.",
     "default": {},
-    "examples": [
-        {
-            "ingress": {
-                "enabled": true,
-                "host": "olivetin.example.com"
-            }
-        }
-    ],
     "required": [
         "ingress"
     ],
-    "properties": {
-        "ingress": {
-            "$id": "#/properties/ingress",
-            "type": "object",
-            "title": "The ingress schema",
-            "description": "Options for controlling ingress.",
-            "default": {},
-            "examples": [
-                {
-                    "enabled": true,
-                    "host": "olivetin.example.com"
-                }
-            ],
-            "required": [
-                "enabled",
-                "host"
-            ],
-            "properties": {
-                "enabled": {
-                    "$id": "#/properties/ingress/properties/enabled",
-                    "type": "boolean",
-                    "title": "The enabled schema",
-                    "description": "Should this helm chart create a ingress resource?",
-                    "default": true,
-                    "examples": [
-                        true
-                    ]
-                },
-                "host": {
-                    "$id": "#/properties/ingress/properties/host",
-                    "type": "string",
-                    "title": "The host schema",
-                    "description": "What hostname should be used in the ingress?",
-                    "default": "olivetin.example.com",
-                    "examples": [
-                        "olivetin.example.com"
-                    ]
-                }
-            },
-            "additionalProperties": true
-        }
-    },
+	"ingress": {
+		"$id": "#/properties/ingress",
+		"type": "object",
+		"title": "The ingress schema",
+		"description": "Options for controlling ingress.",
+		"default": {},
+		"examples": [
+			{
+				"enabled": true,
+				"host": "olivetin.example.com"
+			}
+		],
+		"required": [
+			"enabled",
+			"host"
+		],
+		"properties": {
+			"enabled": {
+				"$id": "#/properties/ingress/properties/enabled",
+				"type": "boolean",
+				"title": "The enabled schema",
+				"description": "Should this helm chart create a ingress resource?",
+				"default": true,
+				"examples": [
+					true
+				]
+			},
+			"host": {
+				"$id": "#/properties/ingress/properties/host",
+				"type": "string",
+				"title": "The host schema",
+				"description": "What hostname should be used in the ingress?",
+				"default": "olivetin.example.com",
+				"examples": [
+					"olivetin.example.com"
+				]
+			}
+		},
+		"additionalProperties": true
+	},
     "additionalProperties": true
 }

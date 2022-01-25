@@ -8,45 +8,47 @@
     "required": [
         "ingress"
     ],
-	"ingress": {
-		"$id": "#/properties/ingress",
-		"type": "object",
-		"title": "Options for controlling ingress",
-		"description": "A Kubernetes Ingress resource is a easy way to allow users from outside the cluster to connect to the OliveTin web interface and API.",
-		"default": {},
-		"examples": [
-			{
-				"enabled": true,
-				"host": "olivetin.example.com"
-			}
-		],
-		"required": [
-			"enabled",
-			"host"
-		],
-		"properties": {
-			"enabled": {
-				"$id": "#/properties/ingress/properties/enabled",
-				"type": "boolean",
-				"title": "Should this helm chart create an Ingress resource?",
-				"description": "Ingress is a quick and easy way to connect to OliveTin, but you may prefer no direct access, or by using a LoadBalancer service instead.",
-				"default": true,
-				"examples": [
-					true
-				]
+	"properties": {
+		"ingress": {
+			"$id": "#/properties/ingress",
+			"type": "object",
+			"title": "Options for controlling ingress",
+			"description": "A Kubernetes Ingress resource is a easy way to allow users from outside the cluster to connect to the OliveTin web interface and API.",
+			"default": {},
+			"examples": [
+				{
+					"enabled": true,
+					"host": "olivetin.example.com"
+				}
+			],
+			"required": [
+				"enabled",
+				"host"
+			],
+			"properties": {
+				"enabled": {
+					"$id": "#/properties/ingress/properties/enabled",
+					"type": "boolean",
+					"title": "Should this helm chart create an Ingress resource?",
+					"description": "Ingress is a quick and easy way to connect to OliveTin, but you may prefer no direct access, or by using a LoadBalancer service instead.",
+					"default": true,
+					"examples": [
+						true
+					]
+				},
+				"host": {
+					"$id": "#/properties/ingress/properties/host",
+					"type": "string",
+					"title": "What hostname do you want to use to connect to OliveTin?",
+					"description": "This is set as a 'Host' rule inside the Ingress resource.",
+					"default": "olivetin.example.com",
+					"examples": [
+						"olivetin.example.com"
+					]
+				}
 			},
-			"host": {
-				"$id": "#/properties/ingress/properties/host",
-				"type": "string",
-				"title": "What hostname do you want to use to connect to OliveTin?",
-				"description": "This is set as a 'Host' rule inside the Ingress resource.",
-				"default": "olivetin.example.com",
-				"examples": [
-					"olivetin.example.com"
-				]
-			}
-		},
-		"additionalProperties": true
+			"additionalProperties": true
+		}
 	},
     "additionalProperties": true
 }

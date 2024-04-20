@@ -4,7 +4,6 @@ metadata:
   name: olivetin-config
 data:
   config.yaml: |
-    {{- .Values.config | nindent 2 }}
+    {{- tpl .Values.config $ | nindent 2 }}
     actions:
-      {{- .Values.actionsConfig | nindent 2 }}
-
+      {{- tpl .Values.actionsConfig $ | nindent 2 }}

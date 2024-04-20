@@ -4,6 +4,6 @@ metadata:
   name: olivetin-config
 data:
   config.yaml: |
-    {{- toYaml .Values.actions | nindent 2 }}
+    {{- toYaml .Values.config | nindent 2 }}
     actions:
-      {{- toYaml .Values.actions | nindent 2 }}
+      {{- toYaml .Values.actionsConfig | nindent 2 }}

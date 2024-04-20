@@ -4,6 +4,6 @@ metadata:
   name: olivetin-config
 data:
   config.yaml: |
+    {{- toYaml .Values.actions | nindent 2 }}
     actions:
-      - title: "Hello world!"
-        shell: echo 'Hello World!'
+      {{- toYaml .Values.actions | nindent 2 }}

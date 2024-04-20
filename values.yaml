@@ -4,6 +4,19 @@ ingress:
   host: olivetin.example.com
   # class: nginx
 
+config:
+  listenAddressWebUI: localhost:1340
+  listenAddressSingleHTTPFrontend: 0.0.0.0:1337
+
+actionsConfig:
+  - title: Restart Plex
+    icon: smile
+    shell: docker restart plex
+
+  # This will send 1 ping
+  - title: Ping Google.com
+    shell: ping google.com -c 1
+
 persisentVolume: true
 
 containerVersion: latest

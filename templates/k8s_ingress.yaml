@@ -4,6 +4,9 @@ kind: Ingress
 metadata: 
   name: olivetin-ingress
 spec:
+  {{- if hasKey .Values "class" }}
+  ingressClassName: {{ .Values.ingress.class }}
+  {{- end }}
   defaultBackend: 
     service: 
       name: olivetin

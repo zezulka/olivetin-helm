@@ -2,6 +2,7 @@
 ingress:
   enabled: true
   host: olivetin.example.com
+  # class: nginx
 
 persisentVolume: true
 

@@ -14,7 +14,7 @@ spec:
     spec:
       containers: 
         - name: olivetin
-          image: docker.io/jamesread/olivetin:latest
+          image: {{ default "docker.io/jamesread/olivetin:latest" .Values.docker.image }}
           ports:
             - containerPort: 1337
           volumeMounts:

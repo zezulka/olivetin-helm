@@ -4,9 +4,10 @@ ingress:
   host: olivetin.example.com
   # class: nginx
 
+docker:
+  image: docker.io/jamesread/olivetin:2024.02.01
+
 config:
-  listenAddressWebUI: localhost:1340
-  listenAddressSingleHTTPFrontend: 0.0.0.0:1337
 
 actionsConfig:
   - title: Restart Plex
@@ -18,5 +19,3 @@ actionsConfig:
     shell: ping google.com -c 1
 
 persisentVolume: true
-
-containerVersion: latest
